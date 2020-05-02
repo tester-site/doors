@@ -272,6 +272,34 @@ var Common = {
         });
         
         
+        $('.card_slider_item').on('click',function(e){
+            e.preventDefault();
+            $('.card_slider_item').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('.size_item').on('click',function(e){
+            e.preventDefault();
+            $('.size_item').removeClass('active');
+            $(this).addClass('active');
+        });
+        
+        
+        $('.add_number a').on('click',function(e){
+            e.preventDefault();
+            
+            if($(this).hasClass('plus')) {
+                $(this).parents('.add_number').find('input').val(Number($(this).parents('.add_number').find('input').val()) + 1)
+            }
+            if($(this).hasClass('minus')) {
+                $(this).parents('.add_number').find('input').val(Number($(this).parents('.add_number').find('input').val()) - 1)
+            }
+            if($(this).parents('.add_number').find('input').val() == 0) {
+                $(this).parents('.add_number').find('input').val(1)
+            }
+            
+            
+        })
+        
     },
 };
 

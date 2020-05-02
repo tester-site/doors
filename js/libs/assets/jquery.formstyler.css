@@ -62,7 +62,7 @@
 	white-space: nowrap;
 }
 .jq-selectbox {
-	z-index: 4!important;
+/*	z-index: 4!important;*/
 }
 .jq-selectbox__select {
 	position: relative;
